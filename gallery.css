@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  font-size: calc(1rem + 0.8vmin);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  background-color: #000 !important;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opactiy: 1;
+  }
+}
+.container {
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  position: relative;
+}
+.container .dot {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 45%;
+}
+.container .dot .dots {
+  height: 1rem;
+  width: 1rem;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+.container .dot .dots:hover {
+  background-color: #685E3F;
+}
+.container .gallery {
+  position: relative;
+  display: none;
+}
+.container .gallery .text {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5;
+  color: #fff;
+}
+.container .gallery .caption {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 45%;
+  color: #fff;
+}
+.container img {
+  width: 100%;
+  animation-name: fadeout;
+  animation-duration: 0.7s;
+}
+.container .prev, .container .next {
+  position: absolute;
+  top: 48%;
+  padding: 1rem;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #fff;
+}
+.container .prev:hover, .container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container .next {
+  right: 0;
+}
