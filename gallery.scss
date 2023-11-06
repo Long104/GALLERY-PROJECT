@@ -24,10 +24,16 @@ body {
     background-color:#000 !important;
 }
 
-@keyframes fadeout {
-from {opacity : 0.4}
-to {opactiy : 1}
-}
+@keyframes fadeOut {
+    from {opacity : 0.4}
+    to {opacity : 1}
+    }
+    
+    // .fadeout {
+    //     animation-name:fadeOut;
+    //     animation-duration:1s;
+    // }
+
 .container {
     max-width: 40rem;
     margin: 0 auto;
@@ -62,6 +68,12 @@ to {opactiy : 1}
     .gallery {
         position:relative;
         display:none;
+        animation-name:fadeOut;
+        animation-duration:1s;
+        
+        
+
+        
 
         .text {
             position:absolute;
@@ -76,14 +88,16 @@ to {opactiy : 1}
             left:45%;
             color:$gray;
         }
+
+        img {
+            width:100%;
+            
+            
+               
+        }
     }
 
-    img {
-        width:100%;
-        animation-name:fadeout;
-        animation-duration:0.7s;
-        
-    }
+   
 
     .prev,.next {
         position:absolute;

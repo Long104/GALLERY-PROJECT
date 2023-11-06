@@ -12,12 +12,12 @@ body {
   background-color: #000 !important;
 }
 
-@keyframes fadeout {
+@keyframes fadeOut {
   from {
     opacity: 0.4;
   }
   to {
-    opactiy: 1;
+    opacity: 1;
   }
 }
 .container {
@@ -46,6 +46,8 @@ body {
 .container .gallery {
   position: relative;
   display: none;
+  animation-name: fadeOut;
+  animation-duration: 1s;
 }
 .container .gallery .text {
   position: absolute;
@@ -59,10 +61,8 @@ body {
   left: 45%;
   color: #fff;
 }
-.container img {
+.container .gallery img {
   width: 100%;
-  animation-name: fadeout;
-  animation-duration: 0.7s;
 }
 .container .prev, .container .next {
   position: absolute;
