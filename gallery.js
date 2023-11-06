@@ -9,23 +9,24 @@ function showGallery(n) {
     }
 
 
-    index = (index > gallery.length) ? 1 : (index < 1) ? gallery.length : index;
+    
+    index = (index > gallery.length) ? 1 : (index < 1) ? gallery.length: index;
 
     for (let i=0; i < dots.length; i++) {
-       dots[i].className = dots[i].className.replace(" active", "") 
+       dots[i].classList.remove("active");
     }
 
    
 
     
     
-
+        
 
 
 
 
     gallery[index - 1].style.display = "block";
-    dots[index - 1].className += " active";
+    dots[index - 1].classList.add("active");
 }
 
 
